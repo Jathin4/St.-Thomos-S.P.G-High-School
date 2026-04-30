@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            fetch('https://sheetdb.io/api/v1/51k7xzz6psr18', {
+            fetch('https://sheetdb.io/api/v1/ubwbzil071043', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            fetch('https://sheetdb.io/api/v1/n20vimh8twcmg', {
+            fetch('https://sheetdb.io/api/v1/uzc51vyvwh875', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
