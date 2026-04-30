@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            fetch('https://sheetdb.io/api/v1/8khn34yj90c5n', {
+            fetch('https://sheetdb.io/api/v1/n20vimh8twcmg', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
