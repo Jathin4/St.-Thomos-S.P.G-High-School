@@ -690,6 +690,38 @@ strong {
 .gallery-overlay span { color: var(--white); font-weight:700; font-size:1.05rem; transform: translateY(12px); transition: transform 0.4s ease; font-family: 'Poppins', sans-serif; }
 .gallery-item:hover .gallery-overlay span { transform: translateY(0); }
 
+/* ══════════════════════════════════════════
+   EVENTS (Grouped Gallery Blocks)
+   ══════════════════════════════════════════ */
+.event-block { margin-top: 56px; }
+.event-block + .event-block { margin-top: 88px; }
+.event-block-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 18px;
+  margin-bottom: 32px;
+}
+.event-block-header h3 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+.event-block-header span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gold-accent);
+  background: rgba(213, 161, 41, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+.event-block .gallery-grid { margin-top: 0; }
+
 /* Lightbox Modal CSS */
 .lightbox-modal {
   position: fixed; inset: 0;
