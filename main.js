@@ -1,5 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── Card Rails: drag-to-scroll + continuous smooth auto-scroll (each rail runs independently) ── */
+  document.querySelectorAll('.card-rail').forEach((rail) => {
+    // Always duplicate at least once so there's a matching second set to loop into seamlessly.
+    // The wrap point (setWidth) must stay reachable within the native max scroll, so keep
+    // adding copies of the original set (one at a time, not doubling — doubling overshoots,
+    // e.g. jumping a 2-card row straight to 8 instead of the 6 it actually needs) until
+    // scrollWidth - clientWidth >= setWidth — otherwise the glide stalls partway, waiting
+    // for a scrollLeft the browser will never let it reach.
+    const setWidth = rail.scrollWidth; // true single-set width, measured before any duplication
+    const originalHTML = rail.innerHTML; // the pristine original set, appended fresh each pass
+    let guard = 0;
+    do {
+      rail.insertAdjacentHTML('beforeend', originalHTML);
+      guard++;
+    } while (rail.scrollWidth - rail.clientWidth < setWidth && guard < 8);
+
+    let dragging = false, startX = 0, startScroll = 0;
+
+    const pxPerSecond = 45; // a slow, steady crawl — not a card-per-second sprint
+    let lastTime = null;
+
+    const glide = (time) => {
+      if (lastTime === null) lastTime = time;
+      const dt = (time - lastTime) / 1000;
+      lastTime = time;
+      // check hover live via :hover instead of a mouseenter/mouseleave flag — on touch
+      // devices "enter" can fire without a matching "leave", which used to freeze this
+      // permanently; matches(':hover') can never get stuck since it's read fresh each frame
+      if (!dragging && !rail.matches(':hover')) {
+        rail.scrollLeft += pxPerSecond * dt;
+        // wrap the seam invisibly and instantly — unnoticeable since the duplicate set is pixel-identical
+        if (rail.scrollLeft >= setWidth) rail.scrollLeft -= setWidth;
+      }
+      requestAnimationFrame(glide);
+    };
+    requestAnimationFrame(glide);
+
+    rail.addEventListener('mouseleave', () => { dragging = false; rail.classList.remove('dragging'); });
+    rail.addEventListener('mousedown', (e) => {
+      dragging = true;
+      rail.classList.add('dragging');
+      startX = e.pageX;
+      startScroll = rail.scrollLeft;
+    });
+    window.addEventListener('mouseup', () => { dragging = false; rail.classList.remove('dragging'); });
+    rail.addEventListener('mousemove', (e) => {
+      if (!dragging) return;
+      e.preventDefault();
+      rail.scrollLeft = startScroll - (e.pageX - startX);
+    });
+  });
+
   /* ── Mobile Menu Toggle ── */
   const toggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -110,6 +162,25 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => statsObserver.observe(c));
   }
 
+  /* ── Quick Nav: Active-Section Highlight (nav itself is sticky in-flow now) ── */
+  const quickNavLinks = document.querySelectorAll('.quick-nav a[href^="#"]');
+  if (quickNavLinks.length) {
+    const qnTargets = Array.from(quickNavLinks)
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+
+    const highlightQuickNav = () => {
+      const offset = (header ? header.offsetHeight : 80) + 40;
+      let currentIndex = 0;
+      qnTargets.forEach((el, i) => {
+        if (el.getBoundingClientRect().top - offset <= 0) currentIndex = i;
+      });
+      quickNavLinks.forEach((a, i) => a.classList.toggle('active', i === currentIndex));
+    };
+    window.addEventListener('scroll', highlightQuickNav, { passive: true });
+    highlightQuickNav();
+  }
+
   /* ── Smooth Scroll for Anchors ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -157,25 +228,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = lightbox.querySelector('.lightbox-next');
     let currentIndex = 0;
 
-    // Collect all image sources and captions from the current page
-    const imagesData = Array.from(galleryItems).map(item => {
+    // Collect image sources and captions, de-duplicated by src — auto-scroll rails clone their
+    // cards in the DOM to loop seamlessly, and without this the lightbox would treat each clone
+    // as a new photo, so "next" never really reached the end, it just kept revealing repeats.
+    const seenSrc = new Set();
+    const imagesData = [];
+    galleryItems.forEach(item => {
       const img = item.querySelector('img');
+      const src = img ? img.getAttribute('src') : '';
+      if (seenSrc.has(src)) return;
+      seenSrc.add(src);
       const overlaySpan = item.querySelector('.gallery-overlay span');
-      return {
-        src: img ? img.getAttribute('src') : '',
+      imagesData.push({
+        src,
         alt: img ? img.getAttribute('alt') : '',
         caption: overlaySpan ? overlaySpan.textContent : (img ? img.getAttribute('alt') : '')
-      };
+      });
     });
 
     function showLightboxImage(index) {
-      currentIndex = (index + imagesData.length) % imagesData.length;
+      // clamp instead of wrap — next/prev stop at the first/last photo instead of looping forever
+      currentIndex = Math.max(0, Math.min(index, imagesData.length - 1));
       const data = imagesData[currentIndex];
       if (data) {
         lightboxImg.setAttribute('src', data.src);
         lightboxImg.setAttribute('alt', data.alt);
         lightboxCaption.textContent = data.caption;
       }
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === imagesData.length - 1;
     }
 
     function openLightbox(index) {
@@ -193,11 +274,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 300);
     }
 
-    // Attach click events to items
-    galleryItems.forEach((item, index) => {
+    // Attach click events to items — look up the de-duplicated index by src, so clicking a
+    // rail clone still opens the one real entry instead of a phantom extra slot
+    galleryItems.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
-        openLightbox(index);
+        const img = item.querySelector('img');
+        const src = img ? img.getAttribute('src') : '';
+        const idx = imagesData.findIndex(d => d.src === src);
+        openLightbox(idx >= 0 ? idx : 0);
       });
     });
 

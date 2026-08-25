@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -24,6 +24,7 @@
       <div class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@stthomasspghighschool" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/918977041852" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -36,7 +37,7 @@
         <a href="about.html" class="active">About</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
         <a href="contact.html" class="btn-apply">Apply Now</a>
       </nav>
@@ -50,27 +51,30 @@
 <main>
 
   <!-- Page Banner -->
-  <section class="page-banner" style="background-image: url('assets/preview.webp')">
-    <div class="container banner-content reveal">
-      <h1>About Us</h1>
-      <div class="breadcrumbs">
-        <a href="index.html">Home</a><span>/</span><span>About</span>
+  <!-- <section class="page-banner" style="background-image: url('assets/about-banner.jpg')"></section> -->
+
+  <div class="page-layout">
+    <nav class="quick-nav" aria-label="Page sections">
+      <div class="quick-nav-title">On This Page</div>
+      <a href="#intro"><span class="num">I</span> About Us</a>
+      <a href="#foundation"><span class="num">II</span> Vision &amp; Mission</a>
+      <a href="#aim"><span class="num">III</span> Our Aim</a>
+      <div class="quick-nav-footer">
+        <span class="qn-label">Legacy</span>
+        <span class="qn-value">170+ Years</span>
       </div>
-    </div>
-  </section>
+    </nav>
+    <div class="page-content">
 
   <!-- About Intro -->
-  <section class="section">
+  <section id="intro" class="section">
     <div class="container">
-      <div class="about-intro-grid">
+      <span class="eyebrow">About Us</span>
+      <h2 class="section-title">Nurturing Excellence <span>Since 1852</span></h2>
+      <div class="gold-rule"></div>
+      <div class="about-intro-grid mt-4">
         <div class="reveal-left">
-          <img src="assets/hero-slide-2.png" alt="St. Thomas Students Assembly" loading="lazy">
-        </div>
-        <div class="reveal-right">
-          <span class="eyebrow">About Us</span>
-          <h2 class="section-title">Nurturing Excellence<br><span>Since 1852</span></h2>
-          <div class="gold-rule"></div>
-          <p style="font-size:1.05rem;line-height:1.8;color:var(--muted);margin-bottom:16px">
+          <p class="drop-cap">
             St. Thomas SPG Schools is dedicated to nurturing young minds with a balanced blend of academic excellence, moral values, and holistic development.
             Our experienced educators, safe campus, and student-centered approach ensure every child receives the attention and guidance needed to grow confidently.
             From Nursery to 10th Class, we prepare students for a successful future.
@@ -80,12 +84,24 @@
             Today, we continue this legacy by fostering consistent self-improvement and inspiring goal-setting in a joyful environment.
           </p>
         </div>
+        <div class="reveal-right">
+          <div class="arch-image-wrap">
+            <img src="assets/DSC09462.JPG" alt="St. Thomas Students Assembly" loading="lazy">
+          </div>
+          <div class="arch-caption">St. Thomas' SPG High School &middot; Secunderabad</div>
+        </div>
+      </div>
+      <div class="branch-pills reveal">
+        <span>Ammuguda Branch</span>
+        <span>Bolarum Branch</span>
+        <span>Secunderabad Branch</span>
+       
       </div>
     </div>
   </section>
 
   <!-- Mission / Vision / Values -->
-  <section class="section section-cream">
+  <section id="foundation" class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="eyebrow">Our Foundation</span>
@@ -113,7 +129,7 @@
   </section>
 
   <!-- Our Aim -->
-  <section class="section">
+  <section id="aim" class="section">
     <div class="container">
       <div class="text-center reveal mb-4">
         <span class="eyebrow">Our Aim</span>
@@ -130,6 +146,9 @@
     </div>
   </section>
 
+    </div>
+  </div>
+
 </main>
 
 <footer class="main-footer">
@@ -140,6 +159,7 @@
       <div class="footer-social">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@stthomasspghighschool" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/918977041852" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -150,7 +170,7 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
       </div>
     </div>
@@ -180,6 +200,6 @@
 </footer>
 
 <a href="https://wa.me/918977041852" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<script src="main.js"></script>
+<script src="main.js?v=12"></script>
 </body>
 </html>

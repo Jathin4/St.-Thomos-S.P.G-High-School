@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -25,6 +25,7 @@
       <div class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@stthomasspghighschool" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/918977041852" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -37,7 +38,7 @@
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
         <a href="contact.html" class="btn-apply">Apply Now</a>
       </nav>
@@ -51,7 +52,7 @@
 <main>
 
   <!-- ───── HERO BANNER / SLIDER ───── -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-slider">
       <div class="slide active" style="background-image: url('assets/preview.webp')">
         <div class="slide-overlay"></div>
@@ -63,6 +64,12 @@
             <div class="hero-actions">
               <a href="#story" class="btn-hero-primary">Our Story <i class="fas fa-arrow-right"></i></a>
               <a href="contact.html" class="btn-hero-outline">Contact Us</a>
+            </div>
+            <div class="hero-facts">
+              <span><strong>Est.</strong> 1852</span>
+              <span><strong>4</strong> Branches</span>
+              <span><strong>LKG</strong> – 10th Class</span>
+              <span><strong>CBSE</strong> / DBSE Curriculum</span>
             </div>
           </div>
         </div>
@@ -78,6 +85,11 @@
               <a href="contact.html" class="btn-hero-primary">Apply Online <i class="fas fa-edit"></i></a>
               <a href="programs.html" class="btn-hero-outline">View Programs</a>
             </div>
+            <div class="hero-facts">
+              <span><strong>Ammuguda</strong> Branch</span>
+              <span><strong>Bolarum</strong> Branch</span>
+              <span><strong>Secunderabad</strong> Branch</span>
+            </div>
           </div>
         </div>
       </div>
@@ -88,50 +100,56 @@
     </div>
   </section>
 
-  <!-- ───── OUR STORY / ABOUT SCHOOL ───── -->
-  <section id="story" class="section">
+  <!-- ───── STATISTICS (full-width band under hero, outside the sidebar layout) ───── -->
+  <section class="stats-section">
     <div class="container">
-      <div class="story-grid">
-        <div class="story-image-wrap reveal-left">
-          <img src="assets/story-main.jpeg" alt="St. Thomas March Past" loading="lazy">
-          <div class="story-badge"><big>1852</big>Established</div>
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <i class="fas fa-user-graduate"></i>
+          <span class="stat-number" data-target="1852">0</span>
+          <span class="stat-label">Established</span>
         </div>
-        <div class="reveal-right">
-          <span class="eyebrow">Our Legacy</span>
-          <h2 class="section-title">A Legacy of<br><span>Shaping Young Minds</span></h2>
-          <div class="gold-rule"></div>
-          <p>St. Thomas' SPG church was established by <strong>Rev. Paran Jyothi in the year 1852</strong> solely as a service to humanity for imparting education and building character.</p>
-          <p>St. Thomas (SPG) schools at Ammuguda, Bolarum, Secunderabad &amp; Trimulgiri were established to educate the children of the society. All the schools are recognised by the Govt of Telangana and today they all are full-fledged English medium schools managed by the St. Thomas' Tamil Church Society, Secunderabad.</p>
-          <a href="about.html" class="btn-link mt-3">Read Full Story <i class="fas fa-arrow-right"></i></a>
+        <div class="stat-card reveal">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span class="stat-number" data-target="9000" data-suffix="+">0</span>
+          <span class="stat-label">Total Students</span>
+        </div>
+        <div class="stat-card reveal">
+          <i class="fas fa-school"></i>
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">School Branches</span>
+        </div>
+        <div class="stat-card reveal">
+          <i class="fas fa-award"></i>
+          <span class="stat-number" data-target="170" data-suffix="+">0</span>
+          <span class="stat-label">Years Legacy</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ───── PRINCIPAL MESSAGE SECTION ───── -->
-  <section class="section section-cream">
-    <div class="container">
-      <div class="story-grid">
-        <div class="reveal-left">
-          <span class="eyebrow">Principal's Desk</span>
-          <h2 class="section-title">Nurturing Minds,<br><span>Shaping Bright Futures</span></h2>
-          <div class="gold-rule"></div>
-          <p>Welcome to St. Thomas' SPG Schools. Guided by our rich heritage since 1852, we remain committed to delivering premium education that builds robust character and deep capabilities in every student.</p>
-          <p>Our focus lies beyond academic syllabus excellence, expanding into creativity, moral values, civic duties, and confidence. We invite families to join our legacy of creating responsible and successful global citizens.</p>
-          <div class="t-author mt-4">
-            <strong>Mrs. Margaret S.</strong>
-            <span>Principal, St. Thomas SPG Schools</span>
-          </div>
-        </div>
-        <div class="story-image-wrap reveal-right">
-          <img src="assets/DSC09499.JPG" alt="Principal and teachers during exhibition" loading="lazy">
-          <div class="story-badge"><big>170+</big>Years Trust</div>
-        </div>
+  <div class="page-layout">
+    <nav class="quick-nav" aria-label="Page sections">
+      <div class="quick-nav-title">On This Page</div>
+      <a href="#home"><span class="num">I</span> Home</a>
+      <a href="#programs"><span class="num">II</span> Our Programs</a>
+      <a href="#story"><span class="num">III</span> Our Story</a>
+      <a href="#church-desk"><span class="num">IV</span> Church Desk</a>
+      <a href="#management-desk"><span class="num">V</span> Management Desk</a>
+      <a href="#why-choose"><span class="num">VI</span> Why Choose Us</a>
+      <a href="#facilities"><span class="num">VII</span> Facilities</a>
+      <a href="#activities"><span class="num">VIII</span> Activities</a>
+      <a href="#gallery-preview"><span class="num">IX</span> Gallery</a>
+      <a href="#testimonials"><span class="num">X</span> Testimonials</a>
+      <a href="#contact"><span class="num">XI</span> Contact</a>
+      <div class="quick-nav-footer">
+        <span class="qn-label">Admissions</span>
+        <span class="qn-value">Open for 2026–27</span>
       </div>
-    </div>
-  </section>
+    </nav>
+    <div class="page-content">
 
-  <!-- ───── ACADEMIC EXCELLENCE & CURRICULUM ───── -->
+  <!-- ───── ACADEMIC EXCELLENCE & CURRICULUM (moved up, mirrors reference's services block) ───── -->
   <section id="programs" class="section">
     <div class="container">
       <div class="text-center reveal">
@@ -147,6 +165,10 @@
             <div class="program-icon"><i class="fas fa-child"></i></div>
           </div>
           <div class="program-card-body">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Ages</span><span class="rb-big">3–5</span><span class="rb-bottom">Yrs</span></div>
+              <span class="rail-tag">Early Years</span>
+            </div>
             <h3>L.K.G &amp; U.K.G</h3>
             <p>Focusing on foundational learning, creativity, and values to build bright futures in a nurturing environment.</p>
             <a href="programs.html" class="card-link">Explore <i class="fas fa-chevron-right"></i></a>
@@ -158,6 +180,10 @@
             <div class="program-icon"><i class="fas fa-book-reader"></i></div>
           </div>
           <div class="program-card-body">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Grade</span><span class="rb-big">1–5</span><span class="rb-bottom">CBSE</span></div>
+              <span class="rail-tag">Primary</span>
+            </div>
             <h3>Nursery to 5th Class</h3>
             <p>Quality education following the affiliated CBSE/DBSE curriculum, offering strong values and joyful learning experiences to help young minds grow with confidence.</p>
             <a href="programs.html" class="card-link">Explore <i class="fas fa-chevron-right"></i></a>
@@ -169,6 +195,10 @@
             <div class="program-icon"><i class="fas fa-graduation-cap"></i></div>
           </div>
           <div class="program-card-body">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Grade</span><span class="rb-big">6–10</span><span class="rb-bottom">SSC</span></div>
+              <span class="rail-tag">High School</span>
+            </div>
             <h3>6th To 10th Class</h3>
             <p>Academic excellence and character building through experienced faculty and a supportive, disciplined environment.</p>
             <a href="programs.html" class="card-link">Explore <i class="fas fa-chevron-right"></i></a>
@@ -181,38 +211,154 @@
     </div>
   </section>
 
-  <!-- ───── SCHOOL HIGHLIGHTS & WHY CHOOSE US ───── -->
-  <section class="section section-cream">
+  <!-- ───── OUR STORY / ABOUT SCHOOL ───── -->
+  <section id="story" class="section">
     <div class="container">
-      <div class="why-grid">
-        <div class="why-image reveal-left">
-          <img src="assets/DSC09428.JPG" alt="Why Choose St. Thomas - Annual Day Parade" loading="lazy">
+      <div class="text-center reveal mb-5">
+        <span class="eyebrow">Our Legacy</span>
+        <h2 class="section-title">A Legacy of <span>Shaping Young Minds</span></h2>
+        <div class="gold-rule center"></div>
+      </div>
+      <div class="story-grid">
+        <div class="reveal-left">
+          <div class="story-image-wrap">
+            <img src="assets/story-main.jpeg" alt="St. Thomas March Past" loading="lazy">
+            <div class="story-badge"><big>1852</big>Established</div>
+          </div>
+          <blockquote class="pull-quote">Nurturing young minds to reach their fullest potential, since 1852.</blockquote>
+          <a href="about.html" class="btn-link mt-3">Read Full Story <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="reveal-right">
-          <span class="eyebrow">Why Choose Us</span>
-          <h2 class="section-title">ST. THOMAS' (SPG)<br><span>Group of Schools</span></h2>
-          <div class="gold-rule"></div>
-          <div class="check-list">
-            <div class="check-item"><i class="fas fa-check"></i><span>Dedicating and Guiding Students towards Excellence.</span></div>
-            <div class="check-item"><i class="fas fa-check"></i><span>High Standards of Ethical, Moral and Civic Conduct.</span></div>
-            <div class="check-item"><i class="fas fa-check"></i><span>Fostering Leadership through Confidence &amp; Teamwork.</span></div>
-            <div class="check-item"><i class="fas fa-check"></i><span>High quality Education using Modern Teaching methods.</span></div>
-            <div class="check-item"><i class="fas fa-check"></i><span>Foundation of Creativity and Capability for all students.</span></div>
-            <div class="check-item"><i class="fas fa-check"></i><span>Disciplined training to become Responsible citizens.</span></div>
-          </div>
+          <p>St. Thomas' SPG church was established by <strong>Rev. Paran Jyothi in the year 1852</strong> solely as a service to humanity for imparting education and building character.</p>
+          <p>St. Thomas (SPG) schools at Ammuguda, Bolarum, Secunderabad &amp; Trimulgiri were established to educate the children of the society. All the schools are recognised by the Govt of Telangana and today they all are full-fledged English medium schools managed by the St. Thomas' Tamil Church Society, Secunderabad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ───── CHURCH DESK ───── -->
+  <section id="church-desk" class="section">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="eyebrow">From the Church</span>
+        <h2 class="section-title">Church <span>Leadership Desk</span></h2>
+        <div class="gold-rule center"></div>
+      </div>
+      <p class="desk-intro reveal">
+        St. Thomas' SPG Schools stand on the foundation laid by the St. Thomas' Tamil Church Society, guiding our
+        institutions with the same faith and purpose since 1852. Our church leadership works closely with the
+        school management to ensure every child grows not only in knowledge but in character, compassion, and
+        conscience. Their continued guidance keeps our schools rooted in service to the community. We are grateful
+        for their pastoral care and constant support to our students, staff, and families.
+      </p>
+      <div class="desk-grid reveal">
+        <div class="desk-card">
+          <img class="desk-photo" src="assets/staff/bishop-moses.jpg" alt="Rt. Rev. Dr. Moses Asirvatham" loading="lazy">
+          <h3>Rt. Rev. Dr. Moses Asirvatham</h3>
+          <span class="desk-role">Bishop</span>
+        </div>
+        <div class="desk-card">
+          <img class="desk-photo" src="assets/staff/john-hastings.jpg" alt="John Hastings" loading="lazy">
+          <h3>John Hastings</h3>
+          <span class="desk-role">President</span>
+        </div>
+        <div class="desk-card">
+          <img class="desk-photo" src="assets/staff/henry-jaganathan.jpg" alt="Henry Jaganathan" loading="lazy">
+          <h3>Henry Jaganathan</h3>
+          <span class="desk-role">Executive Secretary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── SCHOOL MANAGEMENT DESK ───── -->
+  <section id="management-desk" class="section">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="eyebrow">From the Management</span>
+        <h2 class="section-title">School <span>Management Desk</span></h2>
+        <div class="gold-rule center"></div>
+      </div>
+      <p class="desk-intro reveal">
+        Our management team is committed to upholding the highest standards of education while preserving the
+        values our schools were founded on. They oversee academics, infrastructure, and welfare across all our
+        branches, ensuring every child receives a safe, disciplined, and nurturing environment. Working hand in
+        hand with our teaching staff and church leadership, they help shape the long-term vision of St. Thomas'
+        SPG Schools. Their dedication continues to build a legacy of trust for generations of families.
+      </p>
+      <div class="desk-grid reveal">
+        <div class="desk-card">
+          <img class="desk-photo" src="assets/staff/uday-samuel.jpg" alt="Uday Samuel" loading="lazy">
+          <h3>Uday Samuel</h3>
+          <span class="desk-role">Vice President, Group of Schools</span>
+        </div>
+        <div class="desk-card">
+          <img class="desk-photo" src="assets/staff/simon-sadanand.jpg" alt="A. Simon Sadanand" loading="lazy">
+          <h3>A. Simon Sadanand</h3>
+          <span class="desk-role">Manager &amp; Correspondent</span>
+        </div>
+        <div class="desk-card">
+          <img class="desk-photo" src="assets/staff/domnic-godfred.jpg" alt="Domnic Godfred" loading="lazy">
+          <h3>Domnic Godfred</h3>
+          <span class="desk-role">Schools Secretary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── SCHOOL HIGHLIGHTS & WHY CHOOSE US ───── -->
+  <section id="why-choose" class="section">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 class="section-title">ST. THOMAS' (SPG) <span>Group of Schools</span></h2>
+        <div class="gold-rule center"></div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Academic Excellence</h3>
+          <p>Dedicating and guiding students towards excellence.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Moral Values</h3>
+          <p>High standards of ethical, moral and civic conduct.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Leadership</h3>
+          <p>Fostering leadership through confidence &amp; teamwork.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Modern Teaching</h3>
+          <p>High quality education using modern teaching methods.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Creativity</h3>
+          <p>Foundation of creativity and capability for all students.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Discipline</h3>
+          <p>Disciplined training to become responsible citizens.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ───── FACILITIES SECTION ───── -->
-  <section class="section">
+  <section id="facilities" class="section">
     <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="eyebrow">Campus &amp; Amenities</span>
+        <h2 class="section-title">Modern Facilities &amp; <span>Academic Infrastructure</span></h2>
+        <div class="gold-rule center"></div>
+      </div>
       <div class="why-grid">
         <div class="reveal-left">
-          <span class="eyebrow">Campus &amp; Amenities</span>
-          <h2 class="section-title">Modern Facilities &amp;<br><span>Academic Infrastructure</span></h2>
-          <div class="gold-rule"></div>
           <p>We believe in providing the best environment for our students. Our facilities include spacious, airy classrooms, well-stocked subject rooms, and specialized scientific labs.</p>
           <div class="check-list mt-3">
             <div class="check-item"><i class="fas fa-microscope"></i><span>Practical Science Lab for chemistry, physics, and biology experiments.</span></div>
@@ -228,7 +374,7 @@
   </section>
 
   <!-- ───── STUDENT ACTIVITIES & EVENTS ───── -->
-  <section class="section section-cream">
+  <section id="activities" class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="eyebrow">Activities &amp; Development</span>
@@ -268,36 +414,8 @@
     </div>
   </section>
 
-  <!-- ───── STATISTICS ───── -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card reveal">
-          <i class="fas fa-user-graduate"></i>
-          <span class="stat-number" data-target="9000" data-suffix="+">0</span>
-          <span class="stat-label">Total Students</span>
-        </div>
-        <div class="stat-card reveal">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <span class="stat-number" data-target="240" data-suffix="+">0</span>
-          <span class="stat-label">Expert Faculty</span>
-        </div>
-        <div class="stat-card reveal">
-          <i class="fas fa-school"></i>
-          <span class="stat-number" data-target="4">0</span>
-          <span class="stat-label">School Branches</span>
-        </div>
-        <div class="stat-card reveal">
-          <i class="fas fa-award"></i>
-          <span class="stat-number" data-target="170" data-suffix="+">0</span>
-          <span class="stat-label">Years Legacy</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ───── PHOTO GALLERY SECTION ───── -->
-  <section class="section">
+  <section id="gallery-preview" class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="eyebrow">Vibrant Campus Life</span>
@@ -305,31 +423,34 @@
         <div class="gold-rule center"></div>
         <p class="section-subtitle">Take a visual tour of St. Thomas SPG Schools, featuring real moments from our lessons, sports, and celebrations.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item reveal">
-          <img src="assets/preview.webp" alt="School Main Campus Building" loading="lazy">
-          <div class="gallery-overlay"><span>St. Thomas Campus</span></div>
+      <div class="card-rail-wrap reveal">
+        <div class="card-rail">
+          <div class="gallery-item">
+            <img src="assets/preview.webp" alt="School Main Campus Building" loading="lazy">
+            <div class="gallery-overlay"><span>St. Thomas Campus</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/DSC09591.JPG" alt="Creative Project Fair and Exhibits" loading="lazy">
+            <div class="gallery-overlay"><span>Creative Project Fair</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/story-main.jpeg" alt="Sports Day House flags march" loading="lazy">
+            <div class="gallery-overlay"><span>Annual Sports Meet</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/DSC09428.JPG" alt="Annual Day March-past Parade" loading="lazy">
+            <div class="gallery-overlay"><span>Annual Day Drill</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/DSC09462.JPG" alt="Assembly Guests and Dignitaries" loading="lazy">
+            <div class="gallery-overlay"><span>Campus Events</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/DSC09549.JPG" alt="Science Lab Experiment Fair" loading="lazy">
+            <div class="gallery-overlay"><span>Science Fair Labs</span></div>
+          </div>
         </div>
-        <div class="gallery-item reveal">
-          <img src="assets/hero-slide-2.png" alt="Morning School Assembly" loading="lazy">
-          <div class="gallery-overlay"><span>Morning Assembly</span></div>
-        </div>
-        <div class="gallery-item reveal">
-          <img src="assets/story-main.jpeg" alt="Sports Day House flags march" loading="lazy">
-          <div class="gallery-overlay"><span>Annual Sports Meet</span></div>
-        </div>
-        <div class="gallery-item reveal">
-          <img src="assets/DSC09428.JPG" alt="Annual Day March-past Parade" loading="lazy">
-          <div class="gallery-overlay"><span>Annual Day Drill</span></div>
-        </div>
-        <div class="gallery-item reveal">
-          <img src="assets/DSC09462.JPG" alt="Assembly Guests and Dignitaries" loading="lazy">
-          <div class="gallery-overlay"><span>Campus Events</span></div>
-        </div>
-        <div class="gallery-item reveal">
-          <img src="assets/DSC09549.JPG" alt="Science Lab Experiment Fair" loading="lazy">
-          <div class="gallery-overlay"><span>Science Fair Labs</span></div>
-        </div>
+        <div class="rail-hint"><i class="fas fa-arrows-left-right"></i> Drag to scroll</div>
       </div>
       <div class="mt-4 center reveal">
         <a href="gallery.html" class="btn-hero-primary" style="display:inline-flex;">View Full Gallery <i class="fas fa-images"></i></a>
@@ -338,26 +459,65 @@
   </section>
 
   <!-- ───── TESTIMONIALS ───── -->
-  <section class="section section-cream">
+  <section id="testimonials" class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="eyebrow">Testimonials</span>
         <h2 class="section-title">What Families <span>Say About Us</span></h2>
         <div class="gold-rule center"></div>
       </div>
-      <div class="testimonials-grid">
-        <div class="t-card reveal">
-          <div class="stars">★★★★★</div>
-          <div class="t-quote">"</div>
-          <p>This is not my School... But once I went to this School to see how it is... Good School for Children in local Ammuguda, Colony and Yapral... Thank you</p>
-          <div class="t-author"><strong>Khan</strong><span>Parent</span></div>
+      <div class="card-rail-wrap reveal">
+        <div class="card-rail">
+          <div class="testi-card">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Rating</span><span class="rb-big">5.0</span><span class="rb-bottom">★★★★★</span></div>
+              <span class="rail-tag">Parent</span>
+            </div>
+            <h3>Khan</h3>
+            <p>"This is not my School... But once I went to this School to see how it is... Good School for Children in local Ammuguda, Colony and Yapral... Thank you"</p>
+          </div>
+          <div class="testi-card">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Rating</span><span class="rb-big">5.0</span><span class="rb-bottom">★★★★★</span></div>
+              <span class="rail-tag">Alumni</span>
+            </div>
+            <h3>Naga Sri</h3>
+            <p>"Good school with experienced teachers where you can learn subjects as well as values. High quality of education... I can't forget those school days."</p>
+          </div>
+          <div class="testi-card">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Rating</span><span class="rb-big">5.0</span><span class="rb-bottom">★★★★★</span></div>
+              <span class="rail-tag">Parent</span>
+            </div>
+            <h3>Ramesh Reddy</h3>
+            <p>"Very supportive teachers and a safe environment for kids. My daughter has grown so much in confidence since joining. Highly recommend to families in Yapral."</p>
+          </div>
+          <div class="testi-card">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Rating</span><span class="rb-big">5.0</span><span class="rb-bottom">★★★★★</span></div>
+              <span class="rail-tag">Parent</span>
+            </div>
+            <h3>Fathima Begum</h3>
+            <p>"Wonderful staff and management. They genuinely care about every child's progress, not just academics but overall character building too."</p>
+          </div>
+          <div class="testi-card">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Rating</span><span class="rb-big">5.0</span><span class="rb-bottom">★★★★★</span></div>
+              <span class="rail-tag">Alumni</span>
+            </div>
+            <h3>Praveen Kumar</h3>
+            <p>"Studied here till 10th grade and the values I learned still stay with me. The teachers push you to do your best in every way possible."</p>
+          </div>
+          <div class="testi-card">
+            <div class="rail-meta">
+              <div class="rail-badge"><span class="rb-top">Rating</span><span class="rb-big">5.0</span><span class="rb-bottom">★★★★★</span></div>
+              <span class="rail-tag">Parent</span>
+            </div>
+            <h3>Sunitha Rao</h3>
+            <p>"Clean campus, disciplined environment, and teachers who actually know each student by name. One of the best schools around Ammuguda."</p>
+          </div>
         </div>
-        <div class="t-card reveal">
-          <div class="stars">★★★★★</div>
-          <div class="t-quote">"</div>
-          <p>Good school with experienced teachers where you can learn subjects as well as values. High quality of education... I can't forget those school days.</p>
-          <div class="t-author"><strong>Naga Sri</strong><span>Alumni</span></div>
-        </div>
+        <div class="rail-hint"><i class="fas fa-arrows-left-right"></i> Drag to scroll</div>
       </div>
     </div>
   </section>
@@ -423,6 +583,9 @@
     </div>
   </section>
 
+    </div>
+  </div>
+
 </main>
 
 <!-- ───── FOOTER ───── -->
@@ -434,6 +597,7 @@
       <div class="footer-social">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@stthomasspghighschool" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/918977041852" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -444,7 +608,7 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
       </div>
     </div>
@@ -477,6 +641,6 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<script src="main.js"></script>
+<script src="main.js?v=12"></script>
 </body>
 </html>

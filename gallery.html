@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -24,6 +24,7 @@
       <div class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@stthomasspghighschool" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/918977041852" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -36,7 +37,7 @@
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html" class="active">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
         <a href="contact.html" class="btn-apply">Apply Now</a>
       </nav>
@@ -59,8 +60,20 @@
     </div>
   </section>
 
+  <div class="page-layout">
+    <nav class="quick-nav" aria-label="Page sections">
+      <div class="quick-nav-title">On This Page</div>
+      <a href="#gallery-grid"><span class="num">I</span> Photo Gallery</a>
+      <a href="#events"><span class="num">II</span> School Events</a>
+      <div class="quick-nav-footer">
+        <span class="qn-label">Latest Event</span>
+        <span class="qn-value">Independence Day 2026</span>
+      </div>
+    </nav>
+    <div class="page-content">
+
   <!-- Gallery Grid -->
-  <section class="section">
+  <section id="gallery-grid" class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="eyebrow">Gallery</span>
@@ -72,10 +85,6 @@
         <div class="gallery-item reveal">
           <img src="assets/preview.webp" alt="School Front Campus View" loading="lazy">
           <div class="gallery-overlay"><span>School Main Campus</span></div>
-        </div>
-        <div class="gallery-item reveal">
-          <img src="assets/hero-slide-2.png" alt="Morning Assembly and Flags" loading="lazy">
-          <div class="gallery-overlay"><span>Morning Assembly</span></div>
         </div>
         <div class="gallery-item reveal">
           <img src="assets/DSC09428.JPG" alt="PT Exercise Drill Practice" loading="lazy">
@@ -118,7 +127,7 @@
   </section>
 
   <!-- Events -->
-  <section class="section section-cream">
+  <section id="events" class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="eyebrow">Events</span>
@@ -190,6 +199,9 @@
     </div>
   </section>
 
+    </div>
+  </div>
+
 </main>
 
 <footer class="main-footer">
@@ -200,6 +212,7 @@
       <div class="footer-social">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@stthomasspghighschool" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/918977041852" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -210,7 +223,7 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
       </div>
     </div>
@@ -236,6 +249,6 @@
   </div>
 </footer>
 <a href="https://wa.me/918977041852" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<script src="main.js"></script>
+<script src="main.js?v=12"></script>
 </body>
 </html>
