@@ -447,6 +447,8 @@ strong {
    SECTION BASE (Modern layouts)
    ══════════════════════════════════════════ */
 .section { padding: 56px 0; position: relative; }
+/* Clears the sticky header when landing here fresh from another page's "Apply Now" link */
+#inquiry { scroll-margin-top: 150px; }
 .section-cream { background: var(--cream); }
 .section-navy { background: var(--gradient-blue); color: var(--white); }
 
