@@ -52,12 +52,12 @@
 /* ── Reset & Core Styles ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
-body { 
-  font-family: 'Inter', sans-serif; 
-  color: var(--ink); 
-  line-height: 1.8; 
-  background: var(--white); 
-  overflow-x: hidden; 
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  line-height: 1.8;
+  background: var(--white);
+  overflow-x: hidden;
 }
 img { max-width:100%; height:auto; display:block; image-rendering: -webkit-optimize-contrast; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -395,10 +395,10 @@ strong {
   display:block; font-size: 0.86rem; font-weight: 700;
   color: var(--navy); letter-spacing: 0.02em;
 }
-/* Below this width there's no room for menu + content side by side, so stack them */
+/* Below this width there's no room for menu + content side by side — hide the sidebar entirely on mobile/tablet */
 @media (max-width: 1100px) {
-  .page-layout { flex-direction: column; padding-top: 40px; }
-  .quick-nav { position: static; width: 100%; flex: none; max-height: none; }
+  .page-layout { display: block; padding-top: 0; }
+  .quick-nav { display: none; }
 }
 
 /* Buttons */
@@ -446,7 +446,7 @@ strong {
 /* ══════════════════════════════════════════
    SECTION BASE (Modern layouts)
    ══════════════════════════════════════════ */
-.section { padding: 110px 0; position: relative; }
+.section { padding: 80px 0; position: relative; }
 .section-cream { background: var(--cream); }
 .section-navy { background: var(--gradient-blue); color: var(--white); }
 
@@ -1330,7 +1330,7 @@ strong {
 }
 
 @media (max-width: 1024px) {
-  .section { padding: 90px 0; }
+  .section { padding: 64px 0; }
   .top-bar { display: none; }
   .story-grid, .why-grid, .about-intro-grid, .prog-section { grid-template-columns: 1fr; gap: 48px; }
   .programs-grid, .gallery-grid, .blog-grid, .mission-grid, .feature-grid { grid-template-columns: repeat(2,1fr); gap: 24px; }
@@ -1361,7 +1361,9 @@ strong {
 
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  .section { padding: 72px 0; }
+  .section { padding: 52px 0; }
+  .nav-logo { height: 44px; }
+  .main-header .container > a::after { font-size: 0.86rem; margin-left: 10px; }
   .programs-grid, .gallery-grid, .blog-grid, .mission-grid, .testimonials-grid, .aim-list, .feature-grid { grid-template-columns: 1fr; }
   .stats-grid, .cocurr-grid { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -1381,4 +1383,8 @@ strong {
   .stats-grid, .cocurr-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .btn-hero-primary, .btn-hero-outline { width:100%; justify-content:center; }
+  /* No room for the wordmark beside the logo and hamburger on narrow phones — logo alone is enough */
+  .main-header .container > a::after { display: none; }
+  .nav-logo { height: 40px; }
+  .desk-photo, .leader-photo { width: 110px; height: 110px; }
 }
