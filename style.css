@@ -446,7 +446,7 @@ strong {
 /* ══════════════════════════════════════════
    SECTION BASE (Modern layouts)
    ══════════════════════════════════════════ */
-.section { padding: 80px 0; position: relative; }
+.section { padding: 56px 0; position: relative; }
 .section-cream { background: var(--cream); }
 .section-navy { background: var(--gradient-blue); color: var(--white); }
 
@@ -1330,7 +1330,7 @@ strong {
 }
 
 @media (max-width: 1024px) {
-  .section { padding: 64px 0; }
+  .section { padding: 48px 0; }
   .top-bar { display: none; }
   .story-grid, .why-grid, .about-intro-grid, .prog-section { grid-template-columns: 1fr; gap: 48px; }
   .programs-grid, .gallery-grid, .blog-grid, .mission-grid, .feature-grid { grid-template-columns: repeat(2,1fr); gap: 24px; }
@@ -1361,7 +1361,7 @@ strong {
 
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  .section { padding: 52px 0; }
+  .section { padding: 40px 0; }
   .nav-logo { height: 44px; }
   .main-header .container > a::after { font-size: 0.86rem; margin-left: 10px; }
   .programs-grid, .gallery-grid, .blog-grid, .mission-grid, .testimonials-grid, .aim-list, .feature-grid { grid-template-columns: 1fr; }
