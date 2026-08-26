@@ -1339,6 +1339,7 @@ strong {
   .stats-grid, .cocurr-grid { grid-template-columns: repeat(2,1fr); gap: 20px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .story-image-wrap img, .about-intro-grid img, .why-image img, .prog-section img { height: auto; }
+  .arch-image-wrap img { height: 100%; } /* the intro-grid rule above would otherwise flatten the arch photo */
   .story-badge { bottom: -16px; right: 8px; }
   .lightbox-prev { left: -50px; }
   .lightbox-next { right: -50px; }
