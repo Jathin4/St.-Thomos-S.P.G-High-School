@@ -446,7 +446,7 @@ strong {
 /* ══════════════════════════════════════════
    SECTION BASE (Modern layouts)
    ══════════════════════════════════════════ */
-.section { padding: 56px 0; position: relative; }
+.section { padding: 28px 0; position: relative; }
 /* Clears the sticky header when landing here fresh from another page's "Apply Now" link */
 #inquiry { scroll-margin-top: 150px; }
 .section-cream { background: var(--cream); }
@@ -1314,8 +1314,8 @@ strong {
 /* Utilities */
 .mt-2 { margin-top: 12px; }
 .mt-3 { margin-top: 24px; }
-.mt-4 { margin-top: 36px; }
-.mt-5 { margin-top: 56px; }
+.mt-4 { margin-top: 18px; }
+.mt-5 { margin-top: 20px; }
 .mb-4 { margin-bottom: 36px; }
 .mb-5 { margin-bottom: 56px; }
 .gap-1 { gap: 10px; }
@@ -1332,7 +1332,7 @@ strong {
 }
 
 @media (max-width: 1024px) {
-  .section { padding: 48px 0; }
+  .section { padding: 24px 0; }
   .top-bar { display: none; }
   .story-grid, .why-grid, .about-intro-grid, .prog-section { grid-template-columns: 1fr; gap: 48px; }
   .programs-grid, .gallery-grid, .blog-grid, .mission-grid, .feature-grid { grid-template-columns: repeat(2,1fr); gap: 24px; }
@@ -1364,7 +1364,7 @@ strong {
 
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  .section { padding: 40px 0; }
+  .section { padding: 20px 0; }
   .nav-logo { height: 44px; }
   .main-header .container > a::after { font-size: 0.86rem; margin-left: 10px; }
   .programs-grid, .gallery-grid, .blog-grid, .mission-grid, .testimonials-grid, .aim-list, .feature-grid { grid-template-columns: 1fr; }
