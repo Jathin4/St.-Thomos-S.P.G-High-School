@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
 
@@ -38,6 +38,7 @@
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Feedback</a>
         <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
         <a href="contact.html#inquiry" class="btn-apply">Apply Now</a>
@@ -553,33 +554,41 @@
             <div class="c-icon-wrap"><i class="fas fa-envelope"></i></div>
             <div>
               <h4>Email Us</h4>
-              <p>info@stthomasspgschools.com</p>
+              <p>stthomasspghighscool@gmail.com</p>
             </div>
           </div>
         </div>
         <div class="contact-form-card reveal-right">
-          <h3>Send Us a Message</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" placeholder="Full Name" required>
+          <form id="contactMsgForm" action="https://docs.google.com/forms/d/e/1FAIpQLSen-APASKzHC42OZQi-Zzgt0prnB-SOXWFJSu2KP_9-oxZmnQ/formResponse" method="POST" target="hidden_iframe_msg">
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="entry.1686537917" placeholder="Full Name" required>
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" name="entry.2090195375" placeholder="email@example.com" required>
+              </div>
             </div>
             <div class="form-group">
-              <label>Your Email</label>
-              <input type="email" placeholder="email@example.com" required>
+              <label>Subject</label>
+              <input type="text" name="entry.132993204" placeholder="How can we help?">
             </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="entry.729083020" rows="5" placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">SendMessage <i class="fas fa-paper-plane"></i></button>
+            <p class="mt-2" style="font-size:0.85rem;color:var(--muted);text-align:center">Have a specific inquiry? Visit our <a href="contact.html" style="color:var(--navy-mid);font-weight:600">detailed contact page</a>.</p>
+          </form>
+          <div id="contactMsgThanks" class="review-thanks" hidden>
+            <i class="fas fa-circle-check"></i>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent. We'll get back to you soon.</p>
           </div>
-          <div class="form-group">
-            <label>Subject</label>
-            <input type="text" placeholder="How can we help?">
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea rows="5" placeholder="Your message..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">SendMessage <i class="fas fa-paper-plane"></i></button>
-          <p class="mt-2" style="font-size:0.85rem;color:var(--muted);text-align:center">Have a specific inquiry? Visit our <a href="contact.html" style="color:var(--navy-mid);font-weight:600">detailed contact page</a>.</p>
         </div>
+        <iframe name="hidden_iframe_msg" style="display:none;"></iframe>
       </div>
     </div>
   </section>
@@ -609,6 +618,7 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Feedback</a>
         <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
       </div>
@@ -643,5 +653,14 @@
 </a>
 
 <script src="main.js?v=12"></script>
+<script>
+  document.getElementById('contactMsgForm').addEventListener('submit', function () {
+    var form = this;
+    setTimeout(function () {
+      form.hidden = true;
+      document.getElementById('contactMsgThanks').hidden = false;
+    }, 600);
+  });
+</script>
 </body>
 </html>

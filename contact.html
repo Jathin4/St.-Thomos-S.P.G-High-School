@@ -13,7 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="style.css?v=25">
 </head>
 
 <body>
@@ -45,6 +45,7 @@
           <a href="about.html">About</a>
           <a href="programs.html">Programs</a>
           <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Feedback</a>
           <!-- <a href="blog.html">Blog</a> -->
           <a href="contact.html" class="active">Contact</a>
           <a href="#inquiry" class="btn-apply">Apply Now</a>
@@ -97,8 +98,8 @@
                   <h3>Ammuguda Branch</h3>
                   <p>St. Thomas' (SPG) High School, Ammuguda, Sainikpuri, Secunderabad, Telangana 500094</p>
                   <a href="tel:+918977041852"><i class="fas fa-phone"></i> +91 89770 41852</a>
-                  <a href="mailto:info@stthomasspgschools.com"><i class="fas fa-envelope"></i>
-                    info@stthomasspgschools.com</a>
+                  <a href="mailto:stthomasspghighscool@gmail.com"><i class="fas fa-envelope"></i>
+                    stthomasspghighscool@gmail.com</a>
                 </div>
 
                 <div class="branch-card">
@@ -106,8 +107,8 @@
                   <h3>Bolarum Branch</h3>
                   <p>St. Thomas' (SPG) High School, Bolarum, Secunderabad, Telangana 500010</p>
                   <a href="tel:+919059431852"><i class="fas fa-phone"></i> +91 90594 31852</a>
-                  <a href="mailto:bolarum@stthomasspgschools.com"><i class="fas fa-envelope"></i>
-                    bolarum@stthomasspgschools.com</a>
+                  <a href="mailto:stthomasspghighscool@gmail.com"><i class="fas fa-envelope"></i>
+                    stthomasspghighscool@gmail.com</a>
                 </div>
 
                 <div class="branch-card">
@@ -115,46 +116,54 @@
                   <h3>Secunderabad (Regimental)</h3>
                   <p>49, Sebastian Road, Regimental Bazaar, Secunderabad, Telangana 500003</p>
                   <a href="tel:+919059371852"><i class="fas fa-phone"></i> +91 90593 71852</a>
-                  <a href="mailto:admin@stthomasspgschools.com"><i class="fas fa-envelope"></i>
-                    admin@stthomasspgschools.com</a>
+                  <a href="mailto:stthomasspghighscool@gmail.com"><i class="fas fa-envelope"></i>
+                    stthomasspghighscool@gmail.com</a>
                 </div>
               </div>
 
               <!-- Inquiry Form -->
               <div class="reveal-right" id="inquiry">
                 <div class="contact-form-card">
-                  <h3>Admission Inquiry</h3>
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label>Student Name</label>
-                      <input type="text" placeholder="Full Name" required>
+                  <form id="inquiryForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdfhjgfaFCz8dpxKXFG8o7_a3fLxvmtbxUUnlpy9loEfDMXwA/formResponse" method="POST" target="hidden_iframe_inquiry">
+                    <h3>Admission Inquiry</h3>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label>Student Name</label>
+                        <input type="text" name="entry.66512028" placeholder="Full Name" required>
+                      </div>
+                      <div class="form-group">
+                        <label>Parent Name</label>
+                        <input type="text" name="entry.1167180398" placeholder="Full Name" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="entry.759393179" placeholder="+91" required>
+                      </div>
+                      <div class="form-group">
+                        <label>Interested Branch</label>
+                        <select name="entry.1145530636" required>
+                          <option value="Ammuguda">Ammuguda Branch</option>
+                          <option value="Bolarum">Bolarum Branch</option>
+                          <option value="Secunderabad">Secunderabad Branch</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label>Parent Name</label>
-                      <input type="text" placeholder="Full Name" required>
+                      <label>Message / Question</label>
+                      <textarea name="entry.591353388" rows="5" placeholder="Tell us more about your interest..."></textarea>
                     </div>
+                    <button type="submit" class="btn-submit">Send Inquiry <i class="fas fa-paper-plane"></i></button>
+                  </form>
+                  <div id="inquiryThanks" class="review-thanks" hidden>
+                    <i class="fas fa-circle-check"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your inquiry has been received. Our admissions team will get back to you shortly.</p>
                   </div>
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label>Phone Number</label>
-                      <input type="tel" placeholder="+91" required>
-                    </div>
-                    <div class="form-group">
-                      <label>Interested Branch</label>
-                      <select>
-                        <option>Ammuguda Branch</option>
-                        <option>Bolarum Branch</option>
-                        <option>Secunderabad Branch</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Message / Question</label>
-                    <textarea rows="5" placeholder="Tell us more about your interest..."></textarea>
-                  </div>
-                  <button type="submit" class="btn-submit">Send Inquiry <i class="fas fa-paper-plane"></i></button>
                 </div>
               </div>
+              <iframe name="hidden_iframe_inquiry" style="display:none;"></iframe>
             </div>
           </div>
         </section>
@@ -216,7 +225,8 @@
           <a href="about.html">About Us</a>
           <a href="programs.html">Programs</a>
           <a href="gallery.html">Gallery</a>
-          <!-- <a href="blog.html">Blog</a> -->
+          <a href="reviews.html">Feedback</a>
+        <!-- <a href="blog.html">Blog</a> -->
           <a href="contact.html">Contact</a>
         </div>
       </div>
@@ -246,6 +256,15 @@
   <a href="https://wa.me/919059371852?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20St.%20Thomas%20SPG%20Schools." class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i
       class="fab fa-whatsapp"></i></a>
   <script src="main.js?v=12"></script>
+  <script>
+    document.getElementById('inquiryForm').addEventListener('submit', function () {
+      var form = this;
+      setTimeout(function () {
+        form.hidden = true;
+        document.getElementById('inquiryThanks').hidden = false;
+      }, 600);
+    });
+  </script>
 </body>
 
 </html>

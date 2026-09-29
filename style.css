@@ -886,6 +886,19 @@ strong {
   color: var(--white);
 }
 
+/* Star rating widget (Feedback form) */
+.star-rating { display:flex; flex-direction:row-reverse; justify-content:flex-end; gap:6px; }
+.star-rating input { position:absolute; opacity:0; width:0; height:0; }
+.star-rating label { font-size:1.7rem; color:var(--border); cursor:pointer; transition:var(--transition); }
+.star-rating label:hover, .star-rating label:hover ~ label,
+.star-rating input:checked ~ label { color: var(--gold); }
+
+/* Feedback form thank-you state */
+.review-thanks { text-align:center; padding: 20px 0; }
+.review-thanks i { font-size:2.6rem; color: var(--gold); margin-bottom: 14px; }
+.review-thanks h3 { color: var(--navy); font-size:1.6rem; margin-bottom:10px; }
+.review-thanks p { color: var(--muted); }
+
 /* ══════════════════════════════════════════
    SUB PAGES — HERO BANNER
    ══════════════════════════════════════════ */

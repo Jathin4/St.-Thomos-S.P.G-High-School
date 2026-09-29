@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>School Blog | St. Thomas SPG Schools</title>
-  <meta name="description" content="Stay updated with the latest news, events, and educational articles from St. Thomas SPG Schools.">
+  <title>Parent Feedback | St. Thomas SPG Schools</title>
+  <meta name="description" content="Share your feedback and review as a parent, student, or alumni of St. Thomas SPG Schools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -37,8 +37,8 @@
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="reviews.html">Feedback</a>
+        <a href="reviews.html" class="active">Feedback</a>
+        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
         <a href="contact.html#inquiry" class="btn-apply">Apply Now</a>
       </nav>
@@ -54,60 +54,63 @@
   <!-- Page Banner -->
   <section class="page-banner" style="background-image: url('assets/DSC09462.JPG')">
     <div class="container banner-content reveal">
-      <h1>Our Blog</h1>
+      <h1>Share Your Feedback</h1>
       <div class="breadcrumbs">
-        <a href="index.html">Home</a><span>/</span><span>Blog</span>
+        <a href="index.html">Home</a><span>/</span><span>Feedback</span>
       </div>
     </div>
   </section>
 
-  <!-- Blog Grid -->
   <section class="section">
     <div class="container">
       <div class="text-center reveal mb-5">
-        <span class="eyebrow">Latest Updates</span>
-        <h2 class="section-title">News &amp; <span>Stories</span></h2>
+        <span class="eyebrow">Parents &amp; Students</span>
+        <h2 class="section-title">Tell Us <span>What You Think</span></h2>
         <div class="gold-rule center"></div>
-        <p class="section-subtitle">Stay updated with the latest happenings, achievements, and insights from our school community.</p>
+        <p class="section-subtitle">Your feedback helps our school management understand what we're doing well and where we can improve. Responses are reviewed privately by the management team.</p>
       </div>
-      <div class="blog-grid">
-        <article class="blog-card reveal">
-          <div class="blog-thumb">
-            <img src="assets/story-main.jpeg" alt="Sports Day march past" loading="lazy">
+
+      <div class="reveal" style="max-width:640px;margin:0 auto;">
+        <div class="contact-form-card">
+          <form id="reviewForm" action="https://docs.google.com/forms/d/e/1FAIpQLSc_jy_SHctvy3tF59rcfP-aCYpDwgs021n0oBy1GtxpjgDsKg/formResponse" method="POST" target="hidden_iframe">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="entry.1555188477" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label>You Are A</label>
+              <select name="entry.1792525319" required>
+                <option value="" disabled selected>Choose one</option>
+                <option value="Parent">Parent</option>
+                <option value="Student">Student</option>
+                <option value="Alumni">Alumni</option>
+                <option value="Staff">Staff</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Rating</label>
+              <div class="star-rating">
+                <input type="radio" name="entry.38852068" value="5" id="star5" required><label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" name="entry.38852068" value="4" id="star4"><label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" name="entry.38852068" value="3" id="star3"><label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" name="entry.38852068" value="2" id="star2"><label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" name="entry.38852068" value="1" id="star1"><label for="star1"><i class="fas fa-star"></i></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Your Review</label>
+              <textarea name="entry.1662831818" rows="5" placeholder="Tell us about your experience..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit Feedback <i class="fas fa-paper-plane"></i></button>
+          </form>
+          <div id="reviewThanks" class="review-thanks" hidden>
+            <i class="fas fa-circle-check"></i>
+            <h3>Thank You!</h3>
+            <p>Your feedback has been sent to our school management. We appreciate you taking the time to share it.</p>
           </div>
-          <div class="blog-body">
-            <span class="blog-tag">School News</span>
-            <h3>Annual Sports Day 2026</h3>
-            <p>A spectacular showcase of talent and sportsmanship across all three branches.</p>
-            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="blog-card reveal">
-          <div class="blog-thumb">
-            <img src="assets/DSC09549.JPG" alt="Value-Based Education and Science Lab" loading="lazy">
-          </div>
-          <div class="blog-body">
-            <span class="blog-tag">Education</span>
-            <h3>The Importance of Value-Based Education</h3>
-            <p>Why character building is as critical as academic excellence in today's world.</p>
-            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="blog-card reveal">
-          <div class="blog-thumb">
-            <img src="assets/preview.webp" alt="Admissions Open School building" loading="lazy">
-          </div>
-          <div class="blog-body">
-            <span class="blog-tag">Admissions</span>
-            <h3>Admissions Open for 2026–27</h3>
-            <p>Join the St. Thomas legacy. Inquiries are now open for LKG through Grade 10.</p>
-            <a href="contact.html" class="card-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
+        </div>
       </div>
-      <div class="mt-5 center reveal">
-        <button class="btn-hero-primary" style="display:inline-flex;background:var(--navy)">Load More Posts <i class="fas fa-chevron-down"></i></button>
-      </div>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
     </div>
   </section>
 
@@ -117,7 +120,7 @@
   <div class="container footer-grid">
     <div class="footer-col">
       <img src="assets/logo.png" alt="St. Thomas SPG Logo" class="footer-logo">
-      <p>Nurturing young minds to reach their fullest potential since 1852. Managed by St. Thomas' Tamil Church Society.</p>
+      <p>Nurturing young minds to reach their fullest potential since 1852. Managed by St. Thomas' SPG Tamil Church Society.</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/profile.php?id=61575500995581" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/st.thomasspg" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -133,7 +136,6 @@
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
         <a href="reviews.html">Feedback</a>
-        <!-- <a href="blog.html">Blog</a> -->
         <a href="contact.html">Contact</a>
       </div>
     </div>
@@ -160,5 +162,14 @@
 </footer>
 <a href="https://wa.me/919059371852?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20St.%20Thomas%20SPG%20Schools." class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <script src="main.js?v=12"></script>
+<script>
+  document.getElementById('reviewForm').addEventListener('submit', function () {
+    var form = this;
+    setTimeout(function () {
+      form.hidden = true;
+      document.getElementById('reviewThanks').hidden = false;
+    }, 600);
+  });
+</script>
 </body>
 </html>
